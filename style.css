@@ -1,0 +1,91 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body{
+  height: 100vh;
+  background: black;
+}
+
+.container{
+  color: white;
+  font-size: 35px;
+  padding: 0;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
+  top: 50%;
+  left: 50%
+}
+
+
+
+button{
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+}
+
+button {
+    background: none;
+    color: #fff;
+    width: 240px;
+    height: 80px;
+    border: 1px solid white;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:before {
+    content:'';
+    display: block;
+    position: absolute;
+    background: rgba(red, green, blue, alpha);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(red, green, blue, alpha);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top:0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) scaleX(-15deg);
+}
+
+button:hover{
+    background: white;
+    cursor: pointer;
+}
+
+button:hover:before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7;
+}
+
+button:hover:after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .1;
+    transition: .7;
+}
